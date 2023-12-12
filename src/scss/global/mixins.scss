@@ -1,0 +1,50 @@
+// "outline" when element has received focus
+
+@mixin focus-default-styles {
+  outline-width: 2px;
+  outline-style: groove;
+  outline-color: $color-white;
+}
+
+@mixin focus($outline-offset: 0) {
+  @include focus-default-styles;
+
+  outline-offset: $outline-offset;
+}
+
+// Accessible hiding
+
+@mixin visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(100%);
+}
+
+// Cancel accessible hiding
+
+@mixin visually-unhidden {
+  position: static;
+
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: visible;
+
+  white-space: normal;
+
+  clip: auto;
+  clip-path: none;
+}

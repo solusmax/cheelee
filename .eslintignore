@@ -1,0 +1,6 @@
+.sow/
+.vscode/
+build/
+node_modules/
+/*.js
+/*.mjs
