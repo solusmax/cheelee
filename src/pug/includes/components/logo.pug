@@ -1,5 +1,8 @@
 mixin logo(className='')
-  div(class=`logo ${className}`)
+  a(
+    class=`logo ${className}`
+    href='.'
+  )
     picture
       source(
         srcset=`img/logo/logo.webp    1x,
