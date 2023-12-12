@@ -1,2 +1,13 @@
 mixin audited-by(className='')
   div(class=`audited-by ${className}`)
+    a.audited-by__link(
+      href='https://www.certik.com/'
+      target='_blank'
+      rel='noreferrer'
+    )
+      img.audited-by__img(
+        src='img/audited/audited-certic.svg'
+        alt='Audited by Certict'
+        width=177
+        height=58
+      )
