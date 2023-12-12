@@ -1,5 +1,31 @@
+-
+  const currencies = [
+    {
+      name: 'Cheel',
+      value: '$8,00',
+      logo: 'img/currencies/cheel.png',
+      logoSize: 30,
+      status: 'up',
+    },
+    {
+      name: 'Lee',
+      value: '$8,00',
+      logo: 'img/currencies/lee.png',
+      logoSize: 30,
+      status: 'up',
+    },
+  ]
+
 mixin exchange-rates(className='')
   div(class=`exchange-rates ${className}`)
     ul.exchange-rates__list
-      li.exchange-rates__item Cheel
-      li.exchange-rates__item Lee
+      each currency in currencies
+        li(class='exchange-rates__item')
+          .exchange-rates__logo
+            +retina-picture('exchange-rates__img', currency.logo, `${currency.name} logo.`, currency.logoSize, currency.logoSize)
+          span.exchange-rates__name= currency.name
+          span.exchange-rates__value= currency.value
+            span(
+              class=`exchange-rates__status exchange-rates__status--${currency.status}`
+            )
+              span.visually-hidden= currency.status

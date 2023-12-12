@@ -1,3 +1,6 @@
+include includes/utils/index.pug
+include includes/mixins/index.pug
+
 include includes/components/logo.pug
 include includes/components/menu.pug
 include includes/components/exchange-rates.pug
@@ -8,6 +11,7 @@ doctype html
 
 html.page
   include includes/head.pug
+
   body.page__body
     div(style='display: none')
       include /build/img/sprite.svg

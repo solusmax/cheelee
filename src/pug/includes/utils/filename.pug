@@ -1,0 +1,8 @@
+-
+  const getFileExtension = (filename) => filename.split('.').pop();
+
+  const getFileNameWOExtention = (filename) => {
+    const filenameParts = filename.split('.');
+    filenameParts.pop();
+    return filenameParts.join('.');
+  }

@@ -1,0 +1,19 @@
+mixin retina-picture(className, src, alt, width, height)
+  -
+    const srcExtension = getFileExtension(src);
+    const srcWOExtension = getFileNameWOExtention(src);
+
+  picture
+    source(
+      srcset=`${srcWOExtension}.webp    1x,
+              ${srcWOExtension}@2x.webp 2x`
+      type='image/webp'
+    )
+    img(
+      class= className
+      src= src
+      srcset=`${srcWOExtension}@2x.${srcExtension} 2x`
+      alt= alt
+      width= width
+      height= height
+    )
