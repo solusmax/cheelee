@@ -3,6 +3,11 @@
 $fonts: "../fonts";
 $img: "../img";
 
+// Layout
+
+$desktop-width: 1352px;
+$desktop-padding: 80px;
+
 // Fonts
 
 $font-montserrat: "Montserrat", "Arial", sans-serif;
@@ -10,4 +15,9 @@ $font-montserrat: "Montserrat", "Arial", sans-serif;
 // Colors
 
 $color-black: #000000;
+
+$color-grey-100: #fcfcfd;
+
+$color-purple-500: #140132;
+
 $color-white: #ffffff;

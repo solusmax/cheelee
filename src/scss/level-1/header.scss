@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+}
+
+.header__inner {
+  width: $desktop-width;
+}

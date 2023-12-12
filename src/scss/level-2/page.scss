@@ -1,0 +1,35 @@
+.page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: $desktop-width + ($desktop-padding * 2);
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: $color-grey-100;
+  overflow-wrap: break-word;
+
+  background-color: $color-purple-500;
+}
+
+.page__header {
+  flex-shrink: 0;
+}
+
+.page__main {
+  flex-grow: 1;
+}
