@@ -1,7 +1,31 @@
+include includes/components/logo.pug
+include includes/components/menu.pug
+include includes/components/exchange-rates.pug
+include includes/components/audited-by.pug
+include includes/components/language-switcher.pug
+
 doctype html
-html
-  include /src/pug/includes/head.pug
-  body
+
+html.page
+  include includes/head.pug
+  body.page__body
     div(style='display: none')
       include /build/img/sprite.svg
+
+    header.header.page__header
+      +logo('header__logo')
+      +menu('header__menu')
+      +exchange-rates('header__exchange-rates')
+      +audited-by('header__audited-by')
+      +language-switcher('header__language-switcher')
+
+    main.page__main
+      section.promo.page__promo
+      section.mission.page__mission
+      section.features.page__features
+      section.steps.page__steps
+      section.boxes.page__boxes
+      section.presale.page__presale
+      section.about.page__about
+
     script(src='js/script.min.js')

@@ -1,0 +1,35 @@
+-
+  const menuItems = [
+    {
+      text: "About us",
+      link: "./about",
+      isHighlighted: false,
+    },
+    {
+      text: "Roadmap",
+      link: "./roadmap",
+      isHighlighted: false,
+    },
+    {
+      text: "Documents",
+      link: "./docs",
+      isHighlighted: false,
+    },
+    {
+      text: "F.A.Q.",
+      link: "./faq",
+      isHighlighted: false,
+    },
+    {
+      text: "Buy NFT glasses",
+      link: "./buy",
+      isHighlighted: true,
+    },
+  ];
+
+mixin menu(className='')
+  nav(class=`menu ${className}`)
+    ul.menu__list
+      each menuItem in menuItems
+        li(class=`menu__item ${menuItem.isHighlighted ? 'menu__item--highlighted' : ''}`)
+          a.menu__link(href=menuItem.link)= menuItem.text
