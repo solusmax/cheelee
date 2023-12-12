@@ -35,6 +35,7 @@ const BUILD_PATH = './build';
 
 const SrcPath = {
   PUG: `${SRC_PATH}/pug`,
+  PUG_INCLUDES: `${SRC_PATH}/pug/includes`,
   SCSS: `${SRC_PATH}/scss`,
   JS: `${SRC_PATH}/js`,
   IMG: `${SRC_PATH}/img`,
@@ -46,7 +47,8 @@ const SCSS_ENTRY_POINT = `${SrcPath.SCSS}/style.scss`;
 const JS_ENTRY_POINT = `./${SrcPath.JS}/main.js`;
 
 const SrcFiles = {
-  PUG: [`${SrcPath.PUG}/**/*.pug`, `!${SrcPath.PUG}/includes/**/*.pug`],
+  PUG: [`${SrcPath.PUG}/**/*.pug`, `!${SrcPath.PUG_INCLUDES}/**/*.pug`],
+  PUG_INCLUDES: [`${SrcPath.PUG_INCLUDES}/**/*.pug`],
   SCSS: [`${SrcPath.SCSS}/**/*.scss`],
   JS: [`${SrcPath.JS}/**/*.js`],
   IMG: [`${SrcPath.IMG}/**/*.{jpg,jpeg,png,gif,svg}`],
@@ -324,7 +326,7 @@ const startServer = () => {
   // Watchers
 
   watch(
-    [...SrcFiles.PUG, ...SrcFiles.SVG_TO_SPRITE],
+    [...SrcFiles.PUG, ...SrcFiles.PUG_INCLUDES, ...SrcFiles.SVG_TO_SPRITE],
     series(buildSvgSprite, buildHtml, reloadPage),
   );
 
