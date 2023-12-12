@@ -16,9 +16,10 @@ html.page
       .header__inner
         +logo('header__logo')
         +menu('header__menu')
-        +exchange-rates('header__exchange-rates')
-        +audited-by('header__audited-by')
-        +language-switcher('header__language-switcher')
+        .header__wrapper
+          +exchange-rates('header__exchange-rates')
+          +audited-by('header__audited-by')
+          +language-switcher('header__language-switcher')
 
     main.page__main
       section.promo.page__promo

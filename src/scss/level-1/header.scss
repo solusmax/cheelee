@@ -7,5 +7,38 @@
 }
 
 .header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: $desktop-width;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header__inner > * {
+  flex-shrink: 0;
+
+  &:not(:last-child) {
+    margin-right: 36px;
+  }
+}
+
+.header__menu {
+  max-width: 700px;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 480px;
+}
+
+.header__wrapper > * {
+  flex-shrink: 0;
+
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
 }
