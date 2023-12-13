@@ -1,0 +1,89 @@
+.presale {
+  display: flex;
+  justify-content: center;
+}
+
+.presale__inner {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: $desktop-width;
+  padding-left: 116px;
+  padding-right: 117px;
+  padding-top: 52px;
+  padding-bottom: 53px;
+  border-radius: 40px;
+  border-color: $color-purple-100;
+  border-style: solid;
+  border-width: 1px;
+
+  background-image: linear-gradient(
+    rgba($color-purple-100, 0.2),
+    rgba($color-pink-500, 0.2)
+  );
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: 80;
+
+    width: 299px;
+    height: 1px;
+
+    background-color: $color-purple-400;
+  }
+
+  &::before {
+    left: 89px;
+    top: -1px;
+  }
+
+  &::after {
+    right: 89px;
+    bottom: -1px;
+  }
+}
+
+.presale__tagline {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 700;
+}
+
+.presale__arrows {
+  position: absolute;
+  z-index: 100;
+
+  &--1 {
+    left: 344px;
+    top: -10px;
+  }
+
+  &--2 {
+    right: 346px;
+    bottom: -10px;
+
+    transform: rotate(180deg);
+  }
+}
+
+.presale__dashed-border {
+  position: absolute;
+  z-index: 90;
+
+  color: $color-purple-100;
+
+  &--1 {
+    left: 88px;
+    top: -1px;
+  }
+
+  &--2 {
+    right: 88px;
+    bottom: -1px;
+  }
+}

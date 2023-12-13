@@ -1,5 +1,30 @@
+mixin presale-arrows(number)
+  svg(
+    class=`presale__arrows presale__arrows--${number}`
+    width=36
+    height=18
+    aria-hidden='true'
+    focusable='false'
+  )
+    use(xlink:href=`#icon-arrows`)
+
+mixin presale-dashed-border(number)
+  svg(
+    class=`presale__dashed-border presale__dashed-border--${number}`
+    width=250
+    height=1
+    aria-hidden='true'
+    focusable='false'
+  )
+    use(xlink:href=`#icon-dashed-border`)
+
 mixin presale(className='')
   section(class=`presale ${className}`)
     h2.visually-hidden Presale
-    p.presale__tagline Don't miss the <span class='text-highlight'>Presale</span>
-    a.button.presale__button Buy NFT glasses
+    div.presale__inner
+      p.presale__tagline Don't miss the <span class='text-highlight'>Presale</span>
+      a.button.presale__button Buy NFT glasses
+      +presale-arrows(1)
+      +presale-arrows(2)
+      +presale-dashed-border(1)
+      +presale-dashed-border(2)
