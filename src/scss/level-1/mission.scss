@@ -1,0 +1,45 @@
+.mission {
+  display: flex;
+  justify-content: center;
+
+  font-size: 26px;
+  line-height: 38px;
+}
+
+.mission__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 40px;
+  column-gap: 24px;
+
+  width: $desktop-width;
+  padding-left: 115px;
+  padding-right: 115px;
+}
+
+.mission__title {
+  font-size: 72px;
+  line-height: 88px;
+  font-weight: 900;
+}
+
+.mission__smalltext {
+  font-size: 18px;
+  line-height: 33px;
+}
+
+.mission__both-columns {
+  grid-column: 1 / 3;
+}
+
+.mission__left-column {
+  grid-column: 1 / 2;
+}
+
+.mission__right-column {
+  grid-column: 2 / 3;
+}
+
+.mission__inner p:not(:first-child):not(:only-child) {
+  margin-top: 26px;
+}

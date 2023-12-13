@@ -1,10 +1,17 @@
 mixin mission(className='')
   section(class=`mission ${className}`)
-    h2.mission__title <span class='text-highlight'>Cheelee's</span> mission
-    p.mission__description Users spend an average of 2.5 hours daily on social networks and get nothing fоr it. We believe that this is unfair
-    p.mission__description <b>Our mission</b> is to provide everyone with the opportunity to monetize time in social networks
-    p.mission__point <span class='text-highlight'>Cheelee</span> works within the "Attention Economy" framework
-    p.mission__about Other social media consider a user as an information and advertising influence target, <b>but a Cheelee user is a full system member, partner and beneficiary</b>
-    p.mission__about <b>The Attention Economy</b> sees human attention as a scarce commodity making it a new oil! The founder of this concept is the Nobel laureate Herbert Simon
-    p.mission__about The main idea is that attention is converted into income with digital platforms. You pay your attention to what you want, and get paid for it. Your attention has a certain cost.
-    p.mission__about Through the GameFi mechanics, Cheelee's users earn together with the platform by converting their attention into money
+    div.mission__inner
+      div.mission__both-columns
+        h2.mission__title <span class='text-highlight'>Cheelee’s</span> mission
+      div.mission__left-column
+        p Users spend an average of 2.5 hours daily on social networks and get nothing for it. We believe that this is unfair
+      div.mission__right-column
+        p <b>Our mission</b> is to provide everyone with the opportunity to monetize time in social networks
+      div.mission__both-columns
+        p <b><span class='text-highlight'>Cheelee</span> works within the "Attention Economy" framework</b>
+      div.mission__left-column
+        p.mission__smalltext Other social media consider a user as an information and advertising influence target, <b>but a Cheelee user is a full system member, partner and beneficiary</b>
+        p.mission__smalltext <b>The Attention Economy</b> sees human attention as a scarce commodity making it a new oil! The founder of this concept is the Nobel laureate Herbert Simon
+      div.mission__right-column
+        p.mission__smalltext The main idea is that attention is converted into income with digital platforms. You pay your attention to what you want, and get paid for it. Your attention has a certain cost.
+        p.mission__smalltext Through the GameFi mechanics, Cheelee's users earn together with the platform by converting their attention into money
