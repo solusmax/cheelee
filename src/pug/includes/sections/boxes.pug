@@ -1,6 +1,8 @@
 mixin boxes(className='')
   section(class=`boxes ${className}`)
     h2.visually-hidden Get the boxes
-    p.boxes__tagline Watch the videos and <span class='text-highlight'>get the boxes</span>
-    p.boxes__smalltext While watching the feed you can get boxes with NFT or LEE tokens
-    +retina-picture('boxes__img', 'img/boxes/box.png', 'The box.', 367, 283)
+    div.boxes__inner
+      p.boxes__tagline Watch the videos and&nbsp;<span class='text-highlight'>get the boxes</span>
+      p.boxes__smalltext While watching the feed you can get boxes with&nbsp;NFT&nbsp;or&nbsp;LEE&nbsp;tokens
+      div.boxes__img-wrapper
+        +retina-picture('boxes__img', 'img/boxes/box.png', 'The box.', 367, 283)

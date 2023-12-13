@@ -1,0 +1,39 @@
+.boxes {
+  display: flex;
+  justify-content: center;
+}
+
+.boxes__inner {
+  display: grid;
+  grid-template-columns: 1fr 367px;
+  align-items: start;
+  padding-left: 115px;
+  padding-right: 115px;
+
+  width: $desktop-width;
+}
+
+.boxes__tagline {
+  grid-column: 1 / 2;
+
+  font-size: 72px;
+  line-height: 88px;
+  font-weight: 900;
+}
+
+.boxes__smalltext {
+  grid-column: 1 / 2;
+  width: 430px;
+
+  font-size: 18px;
+  line-height: 33px;
+}
+
+.boxes__img-wrapper {
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+}
+
+.boxes__img {
+  object-position: -19px 20px;
+}
