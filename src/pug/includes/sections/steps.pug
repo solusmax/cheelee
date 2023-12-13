@@ -1,13 +1,17 @@
 mixin steps(className='')
   section(class=`steps ${className}`)
     h2.visually-hidden Guide
-    ol.steps__list
-      li.steps__item Sign-up and get your <span class='text-highlight'>free NFT glasses</span>
-      li.steps__item Watch the feed and get the boxes <span class='text-highlight'>with LEE tokens</span>
-      li.steps__item
-        p.steps__text Buy your NFT glasses and <span class='text-highlight'>get LEE tokens</span> directly when watching the feed
-        p.steps__smalltext The higher the rarityof your NFT glasses,the more points you get when leveling themup — the more tokens you can earn
-      li.steps__item Upgrade your <span class='text-highlight'>NFT glasses</span>
-      li.steps__item
-        p.steps__text <span class='text-highlight'>Buy additional NFT glasses</span> to increase the amount of Attention and rewarded time of watching the feed
-        p.steps__smalltext 1 Attention = <b>10 minutes</b> of rewarded feed viewing
+    div.steps__inner
+      ol.steps__list
+        li.steps__item.steps__item--1
+          p.steps__text Sign-up and get your&nbsp;<span class='text-highlight'>free NFT glasses</span>
+        li.steps__item.steps__item--2
+          p.steps__text Watch the feed and get the boxes <span class='text-highlight'>with LEE tokens</span>
+        li.steps__item.steps__item--3
+          p.steps__text Buy your NFT glasses and <span class='text-highlight'>get LEE tokens</span> directly when watching&nbsp;the&nbsp;feed
+          p.steps__smalltext The higher the rarity of&nbsp;your NFT glasses, the&nbsp;more points you get when leveling them up&nbsp;—&nbsp;the more tokens you&nbsp;can earn
+        li.steps__item.steps__item--4
+          p.steps__text Upgrade your <span class='text-highlight'>NFT&nbsp;glasses</span>
+        li.steps__item.steps__item--5
+          p.steps__text <span class='text-highlight'>Buy additional NFT&nbsp;glasses</span> to&nbsp;increase&nbsp;the&nbsp;amount of Attention and&nbsp;rewarded time of&nbsp;watching the feed
+          p.steps__smalltext 1 Attention = <b>10 minutes</b> of&nbsp;rewarded feed viewing

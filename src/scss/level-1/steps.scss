@@ -1,0 +1,123 @@
+.steps {
+  display: flex;
+  justify-content: center;
+}
+
+.steps__inner {
+  position: relative;
+
+  width: $desktop-width;
+  padding-left: 75px;
+  padding-right: 75px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 222px;
+    left: 114px;
+    z-index: -1;
+
+    width: 723px;
+    height: 890px;
+
+    background-image: url("#{$img}/steps/steps-phone.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 258px;
+    left: 1135px;
+    z-index: -1;
+
+    width: 103px;
+    height: 97px;
+
+    background-image: url("#{$img}/steps/coins.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    &::before {
+      background-image: url("#{$img}/steps/steps-phone@2x.jpg");
+    }
+
+    &::after {
+      background-image: url("#{$img}/steps/coins@2x.png");
+    }
+  }
+}
+
+.steps__list {
+  display: grid;
+  grid-template-columns: 348px 252px 340px;
+  grid-template-areas:
+    "a b c"
+    "a b d"
+    "a b e";
+  row-gap: 61px;
+  column-gap: 101px;
+
+  list-style: none;
+
+  counter-reset: steps;
+}
+
+.steps__item {
+  position: relative;
+
+  padding-top: 89px;
+
+  counter-increment: steps;
+
+  &::before {
+    content: counter(steps);
+
+    position: absolute;
+    left: 0;
+    top: -22px;
+
+    font-size: 100px;
+    font-weight: 900;
+    color: rgba($color-purple-100, 0.2);
+  }
+
+  &--1 {
+    grid-area: a;
+  }
+
+  &--2 {
+    grid-area: b;
+  }
+
+  &--3 {
+    grid-area: c;
+  }
+
+  &--4 {
+    grid-area: d;
+  }
+
+  &--5 {
+    grid-area: e;
+  }
+}
+
+.steps__text {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 700;
+}
+
+.steps__smalltext {
+  width: 250px;
+  margin-top: 11px;
+
+  font-size: 18px;
+  line-height: 33px;
+}
