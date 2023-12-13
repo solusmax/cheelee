@@ -5,42 +5,70 @@ include ../components/social-link.pug
     {
       name: 'Discord',
       link: 'https://discord.com/',
-      className: 'social-link--discord',
+      icon: 'icon-discord.svg',
+      width: 37,
+      height: 28,
     },
     {
       name: 'Telegram',
       link: 'https://telegram.org/',
-      className: 'social-link--telegram',
+      icon: 'icon-telegram.svg',
+      width: 32,
+      height: 28,
     },
     {
       name: 'Twitter',
       link: 'https://twitter.com/',
-      className: 'social-link--twitter',
+      icon: 'icon-twitter.svg',
+      width: 34,
+      height: 28,
     },
     {
       name: 'Facebook',
       link: 'https://www.facebook.com/',
-      className: 'social-link--facebook',
+      icon: 'icon-facebook.svg',
+      width: 14,
+      height: 29,
     },
     {
       name: 'Instagram',
       link: 'https://instagram.com/',
-      className: 'social-link--instagram',
+      icon: 'icon-instagram.svg',
+      width: 30,
+      height: 30,
     },
     {
       name: 'Medium',
       link: 'https://medium.com/',
-      className: 'social-link--medium',
+      icon: 'icon-medium.svg',
+      width: 37,
+      height: 20,
     },
   ];
 
 mixin promo(className='')
   section(class=`promo ${className}`)
     h2.visually-hidden Promo
-    p.promo__description GameFi short video <span class='text-highlight'>platform</span>
-    p.promo__tagline Watch. Play. Earn
-    +social-link('social-link--google-play', 'Google Play', 'https://play.google.com/')
-    p.promo__preregistration Pre-registration in Google Play
-    ul.promo__socials
-      each social in socials
-        +social-link(social.className, social.name, social.link)
+    div.promo__inner
+      div.promo__description-wrapper
+        p.promo__description GameFi short video <span class='text-highlight'>platform</span>
+        p.promo__tagline Watch. Play. Earn
+        +social-link(
+          'promo__google-play',
+          'Google Play',
+          'https://play.google.com/',
+          'icon-google-play.svg',
+          30,
+          32,
+        )
+        p.promo__preregistration Pre-registration in Google Play
+      ul.promo__socials
+        each social in socials
+          +social-link(
+            '',
+            social.name,
+            social.link,
+            social.icon,
+            social.width,
+            social.height
+          )

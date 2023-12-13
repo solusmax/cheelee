@@ -15,6 +15,16 @@ img {
   height: auto;
 }
 
+// [1] Reset default margins
+
+p,
+h1,
+h2,
+h3 {
+  // [1]
+  margin: 0;
+}
+
 // https://github.com/WICG/focus-visible
 // [1] Hide the focus indicator if the element receives focus via
 //     the mouse, but it will still show up on keyboard focus

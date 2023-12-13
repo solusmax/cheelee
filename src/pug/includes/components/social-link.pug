@@ -1,4 +1,4 @@
-mixin social-link(className='', name, link)
+mixin social-link(className='', name, link, icon, width, height)
   div(
     class=`social-link ${className}`
   )
@@ -8,3 +8,11 @@ mixin social-link(className='', name, link)
       rel='noreferrer'
     )
       span.visually-hidden= name
+      svg.social-link__icon(
+        width= width
+        height= height
+        aria-hidden='true'
+        focusable='false'
+      )
+        use(xlink:href=`#${getFileNameWOExtention(icon)}`)
+
