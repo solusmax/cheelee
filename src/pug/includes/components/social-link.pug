@@ -1,0 +1,10 @@
+mixin social-link(className='', name, link)
+  div(
+    class=`social-link ${className}`
+  )
+    a.social-link__link(
+      href= link
+      target='_blank'
+      rel='noreferrer'
+    )
+      span.visually-hidden= name

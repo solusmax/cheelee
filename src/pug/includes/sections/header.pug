@@ -1,0 +1,15 @@
+include ../components/logo.pug
+include ../components/menu.pug
+include ../components/exchange-rates.pug
+include ../components/audited-by.pug
+include ../components/language-switcher.pug
+
+mixin header(className='')
+  header(class=`header ${className}`)
+    .header__inner
+      +logo('header__logo')
+      +menu('header__menu')
+      .header__wrapper
+        +exchange-rates('header__exchange-rates')
+        +audited-by('header__audited-by')
+        +language-switcher('header__language-switcher')

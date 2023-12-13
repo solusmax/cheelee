@@ -1,0 +1,46 @@
+include ../components/social-link.pug
+
+-
+  const socials = [
+    {
+      name: 'Discord',
+      link: 'https://discord.com/',
+      className: 'social-link--discord',
+    },
+    {
+      name: 'Telegram',
+      link: 'https://telegram.org/',
+      className: 'social-link--telegram',
+    },
+    {
+      name: 'Twitter',
+      link: 'https://twitter.com/',
+      className: 'social-link--twitter',
+    },
+    {
+      name: 'Facebook',
+      link: 'https://www.facebook.com/',
+      className: 'social-link--facebook',
+    },
+    {
+      name: 'Instagram',
+      link: 'https://instagram.com/',
+      className: 'social-link--instagram',
+    },
+    {
+      name: 'Medium',
+      link: 'https://medium.com/',
+      className: 'social-link--medium',
+    },
+  ];
+
+mixin promo(className='')
+  section(class=`promo ${className}`)
+    h2.visually-hidden Promo
+    p.promo__description GameFi short video <span class='text-highlight'>platform</span>
+    p.promo__tagline Watch. Play. Earn
+    +social-link('social-link--google-play', 'Google Play', 'https://play.google.com/')
+    p.promo__preregistration Pre-registration in Google Play
+    ul.promo__socials
+      each social in socials
+        +social-link(social.className, social.name, social.link)
