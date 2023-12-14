@@ -1,0 +1,51 @@
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.about__inner {
+  position: relative;
+
+  width: $desktop-width;
+  padding-left: 115px;
+  padding-right: 850px;
+  padding-top: 239px;
+  padding-bottom: 277px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -4px;
+    left: 344px;
+    z-index: -1;
+
+    width: 1088px;
+    height: 788px;
+
+    background-image: url("#{$img}/about/about-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    &::before {
+      background-image: url("#{$img}/about/about-background@2x.jpg");
+    }
+  }
+}
+
+.about__tagline {
+  width: 300px;
+
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 700;
+}
+
+.about__smalltext {
+  margin-top: 21px;
+
+  font-size: 18px;
+  line-height: 33px;
+}
