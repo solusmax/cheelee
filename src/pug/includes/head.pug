@@ -1,8 +1,9 @@
-head
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  title Cheelee
-  link(rel='stylesheet' href='css/style.min.css')
-  link(rel='icon' href='favicon.ico')
-  link(rel='apple-touch-icon' href='favicon-apple.png')
-  link(rel='manifest' href='favicon.webmanifest')
+mixin head(pageTitle='')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title= `Cheelee${pageTitle !== '' ? ' • ' : ''}${pageTitle}`
+    link(rel='stylesheet' href='css/style.min.css')
+    link(rel='icon' href='favicon.ico')
+    link(rel='apple-touch-icon' href='favicon-apple.png')
+    link(rel='manifest' href='favicon.webmanifest')

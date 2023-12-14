@@ -1,0 +1,14 @@
+include includes/head.pug
+
+doctype html
+
+html.page
+  +head('Page not found')
+
+  body.page__body
+    div.not-found
+      a.not-found__link(
+        href='index.html'
+      ) Go back
+
+    script(src='js/script.min.js')

@@ -1,6 +1,8 @@
 include includes/utils.pug
 include includes/mixins.pug
 
+include includes/head.pug
+
 include includes/sections/header.pug
 include includes/sections/promo.pug
 include includes/sections/mission.pug
@@ -12,7 +14,7 @@ include includes/sections/about.pug
 doctype html
 
 html.page
-  include includes/head.pug
+  +head()
 
   body.page__body
     div(style='display: none')
