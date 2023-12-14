@@ -4,6 +4,9 @@
 }
 
 .about__inner {
+  --background-image-width: 1088px;
+  --background-image-height: 788px;
+
   position: relative;
 
   width: $desktop-width;
@@ -20,12 +23,14 @@
     left: 344px;
     z-index: -1;
 
-    width: 1088px;
-    height: 788px;
+    width: var(--background-image-width);
+    height: var(--background-image-height);
 
     background-image: url("#{$img}/about/about-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: var(--background-image-width)
+      var(--background-image-height);
   }
 
   @media (min-resolution: 2dppx), (min-resolution: 192dpi) {

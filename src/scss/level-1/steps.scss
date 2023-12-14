@@ -4,6 +4,11 @@
 }
 
 .steps__inner {
+  --background-image-phone-width: 723px;
+  --background-image-phone-height: 890px;
+  --background-image-coins-width: 103px;
+  --background-image-coins-height: 97px;
+
   position: relative;
 
   width: $desktop-width;
@@ -18,12 +23,14 @@
     left: 114px;
     z-index: -1;
 
-    width: 723px;
-    height: 890px;
+    width: var(--background-image-phone-width);
+    height: var(--background-image-phone-height);
 
     background-image: url("#{$img}/steps/steps-phone.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: var(--background-image-phone-width)
+      var(--background-image-phone-height);
   }
 
   &::after {
@@ -34,12 +41,14 @@
     left: 1135px;
     z-index: -1;
 
-    width: 103px;
-    height: 97px;
+    width: var(--background-image-coins-width);
+    height: var(--background-image-coins-height);
 
     background-image: url("#{$img}/steps/coins.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: var(--background-image-coins-width)
+      var(--background-image-coins-height);
   }
 
   @media (min-resolution: 2dppx), (min-resolution: 192dpi) {
