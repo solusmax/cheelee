@@ -12,6 +12,21 @@
   line-height: 24px;
   font-weight: 700;
   text-align: center;
+  color: $color-grey-100;
+  text-decoration: none;
 
   background-color: $color-purple-100;
+
+  transition-property: background-color color;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    background-color: rgba($color-purple-100, 0.95);
+  }
+
+  &:active {
+    color: rgba($color-grey-100, 0.8);
+
+    background-color: rgba($color-purple-100, 0.8);
+  }
 }

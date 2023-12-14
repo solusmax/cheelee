@@ -23,7 +23,9 @@ mixin presale(className='')
     h2.visually-hidden Presale
     div.presale__inner
       p.presale__tagline Don't miss the <span class='text-highlight'>Presale</span>
-      a.button.presale__button Buy NFT glasses
+      a.button.presale__button(
+        href='./buy'
+      ) Buy NFT glasses
       +presale-arrows(1)
       +presale-arrows(2)
       +presale-dashed-border(1)
